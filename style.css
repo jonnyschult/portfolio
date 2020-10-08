@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.gear {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 3em;
+    width: 3em;
+    background-color: transparent;
+}
+
+#headerGear{
+    margin: 0 10px 0 10px;
+    animation-name: spinGearOne;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.tooth{
+    position: absolute;
+    width: .45em;
+    height: 3em;
+    background-color: rgb(150, 150, 150);
+}
+
+.toothTwo {
+    transform: rotate(45deg);
+}
+
+.toothThree {
+    transform: rotate(90deg);
+}
+
+.toothFour {
+    transform: rotate(135deg);
+    
+}
+
+.base {
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: white;
+    border: .5em solid rgb(150, 150, 150);
+    border-radius: 50px;
+    z-index: 1;
+}
+
+@keyframes spinGearOne {
+    from {
+        transform:rotate(45deg);
+    }
+    to {
+        transform:rotate(0deg);
+    }
+}
+
+/* HEADER */
+
+#header{
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    transition: .3s;
+    z-index: 2;
+    border-bottom: 1px solid whitesmoke;
+}
+
+#header:hover{
+    background-color: rgb(115, 157, 245) !important;
+}
+
+#navbarNav {
+    justify-content: center;
+}
+
+#navbarNav ul{
+    align-items: center;
+}
+
+#navbarNav ul li a{
+    color: whitesmoke !important;
+}
+
+#logo{
+    position: absolute;
+    top: 2px;
+    height: 3em;
+    width: 3em;
+}
+
+/* SplashPage */
+
+.jumbotron{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1)), url(assets/beach.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.titleContainer{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.display-4{
+    width: 100%;
+    font-size: 24vw;
+    color: rgba(245, 245, 245, .9);
+    text-shadow: .5em .5em rgba(255, 215, 0, .3);
+    text-align: center;
+}
+
+.lineContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: -62px;
+    width: 100%;
+}
+
+.leftLine{
+    height: 1px;
+    background-color: rgba(255, 215, 0, 1);
+    border: 1px solid rgba(255, 215, 0, 1);
+    width: 35vw;
+}
+
+
+.rightLine{
+    height: 1px;
+    background-color: rgba(255, 215, 0, 1);
+    border: 1px solidrgba(255, 215, 0, 1);
+    width: 35vw;
+}
+
+.symbol{
+    font-size: 20px;
+
+}
+
+.movingArrows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#arrowOne {
+    width: 1em;
+    height: 1em;
+    border-bottom: 4px solid rgb(115, 157, 245);
+    border-right: 4px solid rgb(115, 157, 245);
+    transform: rotate(45deg);
+    animation: moveDiamonOne ease 2s;
+    -webkit-animation: movearrowOne ease 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes movearrowOne {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#arrowTwo {
+    width: 2em;
+    height: 2em;
+    border-bottom: 4px solid rgb(115, 157, 245);
+    border-right: 4px solid rgb(115, 157, 245);
+    margin-top: -7px;
+    opacity: 0;
+    transform: rotate(45deg);
+    animation: moveDiamonTwo ease 2s;
+    -webkit-animation: movearrowTwo ease 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: .2s;
+}
+
+@keyframes movearrowTwo {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#arrowThree {
+    width: 3em;
+    height: 3em;
+    border-bottom: 4px solid rgb(115, 157, 245);
+    border-right: 4px solid rgb(115, 157, 245);
+    margin-top: -7px;
+    opacity: 0;
+    transform: rotate(45deg);
+    animation: moveDiamonThree ease 2s;
+    -webkit-animation: movearrowThree ease 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: .4s;
+}
+
+@keyframes movearrowThree {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+#aboutContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+    background-color: white;    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#aboutContainer h1 {
+    color: rgb(117, 157, 245);
+    font-size: 5em;
+}
+
+#imgHolder{
+    margin: 1em 5em 0 5em;
+    background-color: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1));
+
+}
+
+#aboutPic {
+    max-height: 25em;
+    z-index: -1;
+}
+
+#rowContent {
+    display: flex;
+    width: 100%;
+}
+
+#mainText {
+    width: 60vw;
+    margin-left: 2em;
+}
+
+#mainText p{
+    text-align: center;
+    width: 40vw;
+}
+
+#predicateProof{
+    width: 21.25.5em;
+    height: 20em;
+}
+
+#phi {
+    font-size: 8em;
+    color: rgb(115, 157, 245);
+}
+
+#philosophyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 60vh;
+}
+
+#philosophy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.orbit{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 19em;
+    height: 19em;
+    border-radius: 16em;
+    border: 1px solid rgba(255, 215, 0, 1);
+    margin: 0 2em 0 2em;
+    /* z-index: -3; */
+}
+
+.orbit:hover{
+    box-shadow: 0 0 3em rgba(255, 215, 0, 1) !important;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15em;
+    height: 15em;
+    border-radius: 15em;
+    background-color: rgb(115, 157, 245);
+}
+
+.category p{
+    font-size: 3em;
+    color: rgba(255, 215, 0, 1);
+}
+
+.categoryContent {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: ;
+
+}
+
+.spoke{
+    position: absolute;
+    height: 16.1em;
+    border: 1px solid rgb(115, 157, 245);
+    width: 7px;
+    background-color: rgb(115, 157, 245);
+    z-index: -1;
+}
+
+.spoke2{
+    position: absolute;
+    height: 16.1em;
+    border: 1px solid rgb(115, 157, 245);
+    width: 7px;
+    background-color: rgb(115, 157, 245);
+    z-index: -1;
+}
+
+.spoke3{
+    position: absolute;
+    height: 16.1em;
+    border: 1px solid rgb(115, 157, 245);
+    width: 7px;
+    background-color: rgb(115, 157, 245);
+    z-index: -1;
+}
+
+.orbitGearContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 23em;
+    position: absolute;
+    animation-play-state: paused;
+    animation-name: spinOrbit;
+    animation-duration: 12.78s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.orbitGear{
+    margin: 0 10px 0 10px;
+    animation-play-state: paused;
+    animation-name: spinOrbitGear;
+    animation-duration: 2.434s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.orbitBase {
+    border-color:rgb(115, 157, 245);
+    background-color:  rgba(255, 215, 0);
+}
+
+.orbitTooth{
+    background-color:rgb(115, 157, 245);
+}
+
+#code{
+    background-color: rgba(255, 215, 0, 1);
+}
+
+#code p{
+    font-size: 3em;
+    color: rgb(115, 157, 245);
+}
+
+@keyframes spinOrbitGear{
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes spinOrbit {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+/* #gearBox{
+    display: flex;
+}
+
+#gear1 {
+    position: relative;
+    right: -.1em;
+}
+
+.baseLeft{
+    background-color: whitesmoke;
+    border: .5em solid rgb(41, 43, 44);
+
+}
+
+.leftGear {
+    background-color: rgb(41, 43, 44);
+}
+
+#gear2{
+    position: relative;
+    left: -.1em;
+    transform: rotate(22.5deg);
+}
+
+.rightGear {
+    background-color: rgb(41, 43, 44);
+}
+
+.baseRight {
+    border: .5em solid rgb(41, 43, 44);
+    background-color: whitesmoke;
+} */
