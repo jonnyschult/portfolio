@@ -19,11 +19,13 @@ logo.src = './assets/whitesmokeLogo.png';
 logo.setAttribute('id', 'logo');
 
 window.onscroll = function(){
-  // gear1.style.transform = `rotate(${window.pageYOffset + 22.5}deg)`;
-  // gear2.style.transform = `rotate(-${window.pageYOffset}deg)`;
+  gear1.style.transform = `rotate(${window.pageYOffset + 22.5}deg)`;
+  gear2.style.transform = `rotate(-${window.pageYOffset}deg)`;
+
   if (window.scrollY > 100) {
     header.style.backgroundColor = 'rgba(115, 157, 245, .95)';
     header.style.transition = 'all .3s';
+    header.style.borderBottom = '1px solid whitesmoke';
     logoHolder.appendChild(logo);
     headerBase.style.border = '.5em solid rgba(255, 215, 0)';
     headerBase.style.backgroundColor = 'rgb(115, 157, 245)';
@@ -35,6 +37,7 @@ window.onscroll = function(){
   } else {
     header.style.backgroundColor = 'transparent';
     header.style.transition = 'all .3s';
+    header.style.borderBottom = 'transparent';
     logoHolder.removeChild(logo);
     headerBase.style.border = '.5em solid rgb(150, 150, 150)';
     headerBase.style.backgroundColor = 'white';
@@ -68,11 +71,13 @@ for (let i = 0; i < orbit.length; i++){
       // item.style.transform = `rotate(${window.getComputedStyle(item).transform}deg)`;
       item.style.animationPlayState = 'paused';
     })
+    categoryContent.forEach(item => item.style.display = 'none');
     if(alreadyRunning[i]){
-      orbit[i].style.boxShadow =' 0 0 3em rgba(255, 215, 0, 1)';
+      orbit[i].style.boxShadow =' 0 0 0 black';
       orbitGearContainer[i].style.animationPlayState = 'pause';
       orbitGear[i*2].style.animationPlayState = 'pause';
       orbitGear[(i*2)+1].style.animationPlayState = 'pause';
+      categoryContent[i].style.display = 'none';
       alreadyRunning[i] = false;
       console.log(alreadyRunning)
     }else if(e){
@@ -86,21 +91,50 @@ for (let i = 0; i < orbit.length; i++){
       console.log(alreadyRunning);
     }
   })
-
-  // orbit[i].addEventListener('mouseleave', e => {
-  //   orbit[i].style.boxShadow =' 0 0 0 black';
-  // })
 }
 
-// orbitOne.addEventListener('mouseover', e => {
-//   orbitOne.style.boxShadow =' 0 0 3em rgba(255, 215, 0, 1)';
-// });
+window.addEventListener("DOMContentLoaded", function() {
 
-// orbitOne.addEventListener('click', e =>{
-//   orbitOne.style.boxShadow =' 0 0 0 black';
-// })
+  // get the form elements defined in your form HTML above
+  
+  var form = document.getElementById("my-form");
+  var button = document.getElementById("my-form-button");
+  var status = document.getElementById("my-form-status");
 
-// orbitOne.addEventListener('mouseleave', e => {
-//   orbitOne.style.boxShadow =' 0 0 0 black';
-// })
+  // Success and Error functions for after the form is submitted
+  
+  function success() {
+    form.reset();
+    button.style = "display: none ";
+    status.innerHTML = "Thanks!";
+  }
 
+  function error() {
+    status.innerHTML = "Oops! There was a problem.";
+  }
+
+  // handle the form submission event
+
+  form.addEventListener("submit", function(ev) {
+    ev.preventDefault();
+    var data = new FormData(form);
+    ajax(form.method, form.action, data, success, error);
+  });
+});
+
+// helper function for sending an AJAX request
+
+function ajax(method, url, data, success, error) {
+  var xhr = new XMLHttpRequest();
+  xhr.open(method, url);
+  xhr.setRequestHeader("Accept", "application/json");
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    if (xhr.status === 200) {
+      success(xhr.response, xhr.responseType);
+    } else {
+      error(xhr.status, xhr.response, xhr.responseType);
+    }
+  };
+  xhr.send(data);
+}

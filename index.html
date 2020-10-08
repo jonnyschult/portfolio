@@ -21,10 +21,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Projects <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#portfolio">Projects <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Conact</a>
+                <a class="nav-link" href="#contact">Contact</a>
               </li>
               <li class="nav-item">
                 <!-- beg -->
@@ -38,23 +38,25 @@
                 <!-- end -->
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Philosophy</a>
+                <a class="nav-link" href="#philosophy">Philosophy</a>
               </li>
             </ul>
           </div>
         </nav>
     </header>
+
     <main>
       <div class="jumbotron jumbotron-fluid">
         <div class="titleContainer">
           <h1 class="display-4">J N B S</h1>
-          <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+          <p class="lead">Developer</p>
         </div>
       </div>
-      <div class="lineContainer">
+
+      <div class="lineContainer" id="aboutLines">
         <div class="leftLine"></div>
         <div class="movingArrows">
           <div id="arrowOne"></div>
@@ -63,27 +65,48 @@
         </div>
         <div class="rightLine"></div>
       </div>
-      <div id="aboutContainer">
+
+      <div id="about">
         <h1>I am Jonny Schult and. . . 
         </h1>
-        <div id="rowContent">
-          <div id="imgHolder">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
-            <img src="" alt="" class="aboutPics">
+        <div id="aboutContent">
+          <div id="picsContainer">
+            <div class="picHolder">
+              <img src="assets/chess.JPG" alt="" class="aboutPics">
+              <div class="picTint">Chess</div>
+            </div>
+            <div class="picHolder">
+              <img src="assets/cat.PNG" alt="" class="aboutPics">
+              <div class="picTint">Cats</div>
+            </div>
+            <div class="picHolder">
+              <img src="assets/scotch.png" alt="" class="aboutPics">
+              <div class="picTint">Scotch</div>
+            </div>
+            <div class="picHolder">
+              <img src="assets/running.jpg" alt="" class="aboutPics">
+              <div class="picTint">Running</div>
+            </div>
+            <div class="picHolder">
+              <img src="assets/pierogis.JPG" alt="" class="aboutPics">
+              <div class="picTint">Pierogis</div>
+            </div>
+            <div class="picHolder">
+              <img src="assets/philosophy.JPG" alt="" class="aboutPics">
+              <div class="picTint">Philosophy</div>
+            </div>
+            <div class="picHolder">
+              <img src="assets/lighthouse.jpg" alt="" class="aboutPics">
+              <div class="picTint">Lake Michigan</div>
+            </div>
+            <div class="picHolder">
+              <img src="assets/spousing.jpg" alt="" class="aboutPics">
+              <div class="picTint">Spousing</div>
+            </div>
+            <div class="picHolder">
+              <img src="assets/hiking.JPG" alt="" class="aboutPics">
+              <div class="picTint">Hiking</div>
+            </div>
           </div>
           <div id="mainText">
             <p>I am pragmatist, from the practical to the theoretical level. I come to the tech market from the philosophy world, where I studied American Pragmatism and the philosophy of science. This background shapes the principles which guide my work and allow me to conceptualize, analyze and realize objectives, be they fundamentally creative or technical. 
@@ -95,168 +118,254 @@
         </div>      
       </div>
 
-      <div class="lineContainer">
+      <div class="lineContainer" id="philosphyLines">
         <div class="leftLine"></div>
         <div><span id="phi">&#966;</span></div>
         <div class="rightLine"></div>
       </div>
 
-      <div id="philosophyContainer">
-        <div id="philosophy">
-          <div class="orbit" id="orbitOne">
-            <div class="category" id="uxui"><p>Ux Ui</p>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-              <div class="spoke"></div>
-
-              <div class="orbitGearContainer">
-
-                  <div class="gear orbitGear">
-                    <div class="base orbitBase"></div>
-                    <div class="tooth orbitTooth toothOne"></div>
-                    <div class="tooth orbitTooth toothTwo"></div>
-                    <div class="tooth orbitTooth toothThree"></div>
-                    <div class="tooth orbitTooth toothFour"></div>
-                </div>
-
-                  <div class="gear orbitGear">
-                    <div class="base orbitBase"></div>
-                    <div class="tooth orbitTooth toothOne"></div>
-                    <div class="tooth orbitTooth toothTwo"></div>
-                    <div class="tooth orbitTooth toothThree"></div>
-                    <div class="tooth orbitTooth toothFour"></div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="categoryContent"> <p>lorem ipsum</p> </div>
-
-          <div class="orbit" id="orbitTwo">
-            <div class="category" id="Code"><p>Code</p>
-
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-              <div class="spoke2"></div>
-
-              <div class="orbitGearContainer">
-
-                  <div class="gear orbitGear">
-                    <div class="base orbitBase"></div>
-                    <div class="tooth orbitTooth toothOne"></div>
-                    <div class="tooth orbitTooth toothTwo"></div>
-                    <div class="tooth orbitTooth toothThree"></div>
-                    <div class="tooth orbitTooth toothFour"></div>
-
-                </div>
-
-                  <div class="gear orbitGear">
-                    <div class="base orbitBase"></div>
-                    <div class="tooth orbitTooth toothOne"></div>
-                    <div class="tooth orbitTooth toothTwo"></div>
-                    <div class="tooth orbitTooth toothThree"></div>
-                    <div class="tooth orbitTooth toothFour"></div>
-
+      <div id="philosophy">
+        <h1>Philosphy</h1>
+        <div id="philContainer">
+          <div class="category">
+            <div class="orbit" id="orbitOne">
+              <div class="bigBase" id="uxui"><p>Ux Ui</p>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+                <div class="spoke"></div>
+  
+                <div class="orbitGearContainer">
+  
+                    <div class="gear orbitGear">
+                      <div class="base orbitBase"></div>
+                      <div class="tooth orbitTooth toothOne"></div>
+                      <div class="tooth orbitTooth toothTwo"></div>
+                      <div class="tooth orbitTooth toothThree"></div>
+                      <div class="tooth orbitTooth toothFour"></div>
+                  </div>
+  
+                    <div class="gear orbitGear">
+                      <div class="base orbitBase"></div>
+                      <div class="tooth orbitTooth toothOne"></div>
+                      <div class="tooth orbitTooth toothTwo"></div>
+                      <div class="tooth orbitTooth toothThree"></div>
+                      <div class="tooth orbitTooth toothFour"></div>
+                  </div>
+  
                 </div>
               </div>
             </div>
+            <div class="categoryContent"> <p>What makes a good user experience? What the user expects often determines how the user feels about a website. As such, user experience is a dynamic process of expectation and experience. My goal in developing websites is to meet and exceed user expectation by creating a website in-line with its purpose and meticulously and empirically monitored.</p> </div>
           </div>
-          <div class="categoryContent"> <p>lorem ispusm </p></div>
-          <div class="orbit" id="orbitThree">
-            <div class="category" id="work"><p>Work</p>
-
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="spoke3"></div>
-              <div class="orbitGearContainer">
-
-                  <div class="gear orbitGear">
-                    <div class="base orbitBase"></div>
-                    <div class="tooth orbitTooth toothOne"></div>
-                    <div class="tooth orbitTooth toothTwo"></div>
-                    <div class="tooth orbitTooth toothThree"></div>
-                    <div class="tooth orbitTooth toothFour"></div>
-
-                </div>
-
-                  <div class="gear orbitGear">
-                    <div class="base orbitBase"></div>
-                    <div class="tooth orbitTooth toothOne"></div>
-                    <div class="tooth orbitTooth toothTwo"></div>
-                    <div class="tooth orbitTooth toothThree"></div>
-                    <div class="tooth orbitTooth toothFour"></div>
-
+          <div class="category">
+            <div class="orbit" id="orbitTwo">
+              <div class="bigBase" id="Code"><p>Code</p>
+              
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+                <div class="spoke2"></div>
+  
+                <div class="orbitGearContainer">
+  
+                    <div class="gear orbitGear">
+                      <div class="base orbitBase"></div>
+                      <div class="tooth orbitTooth toothOne"></div>
+                      <div class="tooth orbitTooth toothTwo"></div>
+                      <div class="tooth orbitTooth toothThree"></div>
+                      <div class="tooth orbitTooth toothFour"></div>
+                    </div>
+  
+                    <div class="gear orbitGear">
+                      <div class="base orbitBase"></div>
+                      <div class="tooth orbitTooth toothOne"></div>
+                      <div class="tooth orbitTooth toothTwo"></div>
+                      <div class="tooth orbitTooth toothThree"></div>
+                      <div class="tooth orbitTooth toothFour"></div>
+                    </div>
+  
                 </div>
               </div>
             </div>
+            <div class="categoryContent"> <p>There are many different ways to achieve the same results on a webpage. But quality programming goes beyond merely getting results once. Good programming should be transparent, responsive to it's content, and deliver functionality effeciently. A lot of this comes down to the structure and logic of the code itself, but even the best laid paths benefit from a map. Rigorous documentation ensures that the code can be comprehended, used, and improved by whoever is maintaining it. As such, I am developing and improving upon documentation methods for my code. </p></div>
           </div>
-          <div class="categoryContent"><p>lorem ipsum</p></div>
+          <div class="category">
+            <div class="orbit" id="orbitThree">
+              <div class="bigBase" id="work"><p>Work</p>
+  
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="spoke3"></div>
+                <div class="orbitGearContainer">
+  
+                    <div class="gear orbitGear">
+                      <div class="base orbitBase"></div>
+                      <div class="tooth orbitTooth toothOne"></div>
+                      <div class="tooth orbitTooth toothTwo"></div>
+                      <div class="tooth orbitTooth toothThree"></div>
+                      <div class="tooth orbitTooth toothFour"></div>
+                    </div>
+  
+                    <div class="gear orbitGear">
+                      <div class="base orbitBase"></div>
+                      <div class="tooth orbitTooth toothOne"></div>
+                      <div class="tooth orbitTooth toothTwo"></div>
+                      <div class="tooth orbitTooth toothThree"></div>
+                      <div class="tooth orbitTooth toothFour"></div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+            <div class="categoryContent"><p>Business environments can be stressful. Often times this stress is compounded by poor working relationships. It is my philosophy that human productivity, and life in general, is best fostered in an enthusiastic, collaborative and open environment. When these things are done well, meaning and quality of life comes along with productivity. As professional, I conduct my work in a way which brings meaning and productivity to myself and my colleagues. </p></div>
+          </div>
         </div>
-        <div id="collapseInfo">
 
-        </div>
       </div>
 
-      <div class="jumbotron jumbotron-fluid">
-        <div class="titleContainer">
-          <h1 class="display-4">J N B S</h1>
-          <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+      <div class="lineContainer">
+        <div class="leftLine"></div>
+        <div class="symbol" id="gearBox">
+          <div class="gear" id="gear1">
+            <div class="base baseLeft"></div>
+            <div class="tooth leftGear toothOne" ></div>
+            <div class="tooth leftGear toothTwo" ></div>
+            <div class="tooth leftGear toothThree"></div>
+            <div class="tooth leftGear toothFour"></div>
+          </div>
+          <div class="gear" id="gear2">
+            <div class="base baseRight"></div>
+            <div class="tooth rightGear toothOne"></div>
+            <div class="tooth rightGear toothTwo"></div>
+            <div class="tooth rightGear toothThree"></div>
+            <div class="tooth rightGear toothFour"></div>
+          </div>
         </div>
+        <div class="rightLine"></div>
+      </div>
+      
+      <div id="projectContainer">
+
+        <h1 id="portfolio">Portfolio</h1>
+        <div id="projectItems">
+          <div id="oneToThree">
+            <a class="projectLink" href="https://jnbs-strava-runner-sheets.web.app/" target="blank">
+              <img src="./assets/runnerSheets.jpg" alt="">
+              <div class="overlay"><h1>Runner Sheets</h1> Runner Sheets is and app in pre-alpha phase which compiles running data by accessing APIs. When fully implemented, it aims to provide athletes a single source to access all of their running data and provide conceptualization tools for team and self coaching.</div>
+            </a>
+            <a class="projectLink" href="https://jonnyschult.github.io/staticLayout/" target="blank">
+              <img src="./assets/staticLayout.jpg" alt="">
+              <div class="overlay"><h1>Static staticLayout</h1>This project aimed to test and expand styling skills with CSS and HTML. There is not JavaScript or DOM manipulation on this page.</div>
+            </a>
+            <a class="projectLink" href="https://jonnyschult.github.io/ghibliAPI/" target="blank">
+              <img src="./assets/studioGhibliAPI.jpg" alt="">
+              <div class="overlay"><h1>Studio Ghibli API</h1> Studio Ghibli is a premiere anime film studio based in Japan. It has grossed more than a billion dollars. This site invites you to experience the art of Ghibli why reading synopses of their films ranked best to worst by Rotten Tomatoes scoring accessed using an API.</div>
+            </a>
+          </div>
+          <div id="fourToSix">
+            <a class="projectLink" href="https://gardenerspath.com/plants/flowers/early-spring-flowers/" target="blank">
+              <img src="./assets/blueBadge.jpg" alt="">
+              <div class="overlay"><h1>TBD</h1>In the meantime, here is a picture of my wife giving me a flower on an early spring day. </div>
+            </a>
+            <a class="projectLink" href="https://jonnyschult.github.io/CreatureCSS/" target="blank">
+              <img src="./assets/creatureCSS.jpg" alt="">
+              <div class="overlay"><h1>CSS Creature</h1> CSS created creatures tied to the theme of human intellectual evolution. Click on the links to read about some of the key players in the history of logic.</div>
+            </a>
+            <a class="projectLink" href="https://newagebakingcompany.com/" target="blank">
+              <img src="./assets/redBadge.jpg" alt="">
+              <div class="overlay"><h1>TBD</h1>In the meantime, here is a fruity pepples donut from a local bakery.</div>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="lineContainer" id="contactLines">
+        <div class="leftLine"></div>
+        <div id="contactCircle"> <span id="contactInfo">Contact Info</span>       
+          <div id="contactTriangle"></div>
+         </div>
+        <div class="rightLine"></div>
+      </div>
+
+      <div id="contact">
+
+        <!-- <img src="./assets/LI-In-Bug.png" alt="">
+
+        <img src="./assets/GitHub-Mark-120px-plus.png" alt=""> -->
+
+        <form id="my-form"
+        action="https://formspree.io/f/mdopawwv"
+        method="POST">
+          <input id="senderEmail" type="email" name="email" placeholder="your-email@here.com"/>
+          <input id="message" type="text" name="message" placeholder="Message"/>
+          <button id="my-form-button">Send</button>
+          <p id="my-form-status"></p>
+      </form>
+
+      <div id="links">
+        <!-- <a href="https://github.com/jonnyschult"><img src="./assets/GitHub-Mark-120px-plus.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/jonathan-schult-827156195/"><img src="./assets/LI-In-Bug.png" alt=""></a> -->
+      </div>
+      </div>
+      <div id="farewell">
+        <img src="./assets/logoAnimate.png" alt="">
+      </div>
     </main>
+    <footer> <a href="https://github.com/jonnyschult">GitHub</a><a href="https://www.linkedin.com/in/jonathan-schult-827156195/">LinkedIn</a> <span> © 2017 Copyright: Jonny Schult</span></footer>
   </div>
 
     <script src="./script.js"></script>
@@ -265,20 +374,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<!-- <div class="symbol" id="gearBox">
-  <div class="gear" id="gear1">
-    <div class="base baseLeft"></div>
-    <div class="tooth leftGear toothOne" ></div>
-    <div class="tooth leftGear toothTwo" ></div>
-    <div class="tooth leftGear toothThree"></div>
-    <div class="tooth leftGear toothFour"></div>
-  </div>
-  <div class="gear" id="gear2">
-    <div class="base baseRight"></div>
-    <div class="tooth rightGear toothOne"></div>
-    <div class="tooth rightGear toothTwo"></div>
-    <div class="tooth rightGear toothThree"></div>
-    <div class="tooth rightGear toothFour"></div>
-  </div>
-</div> -->

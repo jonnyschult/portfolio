@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
 *{
     font-family: 'Roboto', sans-serif;
 }
@@ -64,11 +64,11 @@
 
 #header{
     position: fixed;
-    width: 100%;
+    width: 100vw;
     background-color: transparent;
     transition: .3s;
     z-index: 2;
-    border-bottom: 1px solid whitesmoke;
+    margin: 0 !important;
 }
 
 #header:hover{
@@ -90,8 +90,8 @@
 #logo{
     position: absolute;
     top: 2px;
-    height: 3em;
-    width: 3em;
+    height: 2/7em;
+    width: 2.7em;
 }
 
 /* SplashPage */
@@ -117,6 +117,12 @@
     color: rgba(245, 245, 245, .9);
     text-shadow: .5em .5em rgba(255, 215, 0, .3);
     text-align: center;
+}
+
+.lead{
+    color: rgba(245, 245, 245, .8);
+    font-size: small;
+    margin-right: 10px;
 }
 
 .lineContainer{
@@ -215,71 +221,137 @@
     100% {opacity: 0;}
 }
 
-#aboutContainer {
+#about {
     display: flex;
     flex-direction: column;
-    min-height: 85vh;
-    background-color: white;    
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-#aboutContainer h1 {
-    color: rgb(117, 157, 245);
+#about h1 {
+    position: relative;
+    color: rgb(130, 130, 130);
     font-size: 5em;
+    margin-bottom: 1em;
 }
 
-#imgHolder{
-    margin: 1em 5em 0 5em;
-    background-color: linear-gradient(rgba(0, 0, 0, 0), rgba(255, 255, 255, 1));
-
-}
-
-#aboutPic {
-    max-height: 25em;
-    z-index: -1;
-}
-
-#rowContent {
+#aboutContent{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 60vh;
+}
+
+#picsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 24em;
+    width: 24em;
+}
+
+.picHolder{
+    position: relative;
+    width: 8em;
+    height: 8em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aboutPics{
+    height: 8em;
+    width: 8em;
+    object-fit: cover;
+}
+
+.picTint {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
+    color: rgb(100, 137, 216);
+    font: 10px sans-serif;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    opacity: 0;
+    transition: opacity .5s ease;
+    background-color: white;
+}
+
+.picHolder:hover .picTint {
+    opacity: .9 !important;
 }
 
 #mainText {
-    width: 60vw;
-    margin-left: 2em;
+    width: 25vw;
+    margin-right: 2em;
 }
 
 #mainText p{
     text-align: center;
-    width: 40vw;
+    width: 100%;
+    margin: 0;
 }
 
-#predicateProof{
-    width: 21.25.5em;
-    height: 20em;
+.resume{
+    display: flex;
+    flex-direction: column;
+}
+
+.resume h5{
+    color: rgb(150, 150, 150);
+    position: absolute;
+}
+
+.resume img{
+    height: 25em;
+    width: 18em;
 }
 
 #phi {
     font-size: 8em;
-    color: rgb(115, 157, 245);
-}
-
-#philosophyContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 60vh;
+    color: rgb(150, 150, 150);
 }
 
 #philosophy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    min-height: 30vh;
+    margin-bottom: 8em;
+}
+
+#philContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     height: auto;
-    text-align: center;
+    min-height: 30vh;
+    margin-bottom: 8em;
+}
+
+#philosophy h1{
+    font-size: 4em;
+    color: rgb(130, 130, 130);
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 1em;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    height: 55vh;
+    position: relative;
 }
 
 .orbit{
@@ -296,10 +368,10 @@
 }
 
 .orbit:hover{
-    box-shadow: 0 0 3em rgba(255, 215, 0, 1) !important;
+    box-shadow: 0 0 3em rgba(255, 215, 0, 1)!important;
 }
 
-.category {
+.bigBase {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -309,17 +381,21 @@
     background-color: rgb(115, 157, 245);
 }
 
-.category p{
+.bigBase p{
     font-size: 3em;
     color: rgba(255, 215, 0, 1);
 }
 
 .categoryContent {
-    display: flex;
+    display: none;
     justify-content: center;
-    position: relative;
-    bottom: ;
-
+    width: 100%;
+    padding: 1em;
+    position: absolute;
+    top: 350px;
+    width: 100%;
+    border: 3px solid  rgb(115, 157, 245);
+    border-radius: 20px;
 }
 
 .spoke{
@@ -372,7 +448,7 @@
 
 .orbitBase {
     border-color:rgb(115, 157, 245);
-    background-color:  rgba(255, 215, 0);
+    background-color:  rgb(255, 217, 0);
 }
 
 .orbitTooth{
@@ -406,7 +482,7 @@
     }
 }
 
-/* #gearBox{
+#gearBox{
     display: flex;
 }
 
@@ -417,12 +493,12 @@
 
 .baseLeft{
     background-color: whitesmoke;
-    border: .5em solid rgb(41, 43, 44);
+    border: .5em solid rgb(150, 150, 150);
 
 }
 
 .leftGear {
-    background-color: rgb(41, 43, 44);
+    background-color: rgb(150, 150, 150);
 }
 
 #gear2{
@@ -432,10 +508,221 @@
 }
 
 .rightGear {
-    background-color: rgb(41, 43, 44);
+    background-color: rgb(150, 150, 150);
 }
 
 .baseRight {
-    border: .5em solid rgb(41, 43, 44);
+    border: .5em solid rgb(150, 150, 150);
     background-color: whitesmoke;
-} */
+}
+
+#projectContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 4em;
+}
+
+#portfolio{
+    font-size: 4em;
+    color: rgb(130, 130, 130);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#projectItems{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+#oneToThree{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#fourToSix {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.projectLink{
+    position: relative;
+    width: 23em;
+    height: 27em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    text-align: center;
+    color: rgb(100, 137, 216);
+    font: 20px sans-serif;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    opacity: 0;
+    transition: opacity .5s ease;
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .1));
+}
+
+.overlay h1{
+    font-weight: bolder;
+}
+
+.projectLink:hover .overlay {
+    opacity: .9;
+}
+
+.projectLink img{
+    width: 23em;
+    height: 27em;
+    object-fit: cover;
+}
+
+#contactLines{
+    top: 1em;
+    margin-bottom: 3em;
+}
+
+#contactCircle {
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(150, 150, 150);
+    background-color: rgb(150, 150, 150);
+    height: 12em;
+    width: 12em;
+    border-radius: 15em;
+}
+
+#contactTriangle{
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    border: 1px solid rgb(150, 150, 150);
+    background-color: rgb(150, 150, 150);
+    height: 7em;
+    width: 7em;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+#contactInfo{
+    color: whitesmoke;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
+}
+
+#my-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#senderEmail{
+    margin: 3em 0 3em 0;
+    width: 65%;
+    height: 4em;
+    border: 3px solid rgb(150, 150, 150);
+    border-radius: 1em;
+    text-align: center;
+}
+
+#senderEmail:focus {
+    outline: none;
+    border-color: rgb(115, 157, 245);
+    box-shadow: 0 0 1em rgba(255, 215, 0, 1);
+    color: rgb(41, 43, 44);
+}
+
+#message {
+    margin: 3em 0 3em 0;
+    width: 65%;
+    height: 15em;
+    border: 3px solid rgb(150, 150, 150);
+    border-radius: 1em;
+    text-align: center;
+}
+
+#message:focus {
+    outline: none;
+    border-color: rgb(115, 157, 245);
+    box-shadow: 0 0 .5em rgba(255, 215, 0, 1);
+    color: rgb(41, 43, 44);
+}
+
+#my-form-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 3em;
+    border-radius: 3em;
+    border: rgb(115, 157, 245);
+    background-color: rgb(115, 157, 245);
+    color: whitesmoke;
+}
+
+#my-form-button:hover {
+    box-shadow: 0 0 .5em rgba(255, 215, 0, 1);
+}
+
+#my-form-button:focus{
+    outline: none;
+}
+
+#my-form-button:active{
+    outline: none;
+    box-shadow: 0 0 0 rgba(255, 215, 0, 1);
+}
+
+#links{
+    display: flex;
+    justify-content: space-around;
+}
+
+#farewell{
+    display: flex;
+    justify-content: center;
+}
+
+#farewell img{
+    height: 24em;
+    width: 24em;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgb(41, 43, 44);
+    background-color: rgb(100, 137, 216);
+    height: 4em;
+    width: 100%;
+    color: whitesmoke;
+}
+
+footer a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: rgb(255, 217, 0);
+}
