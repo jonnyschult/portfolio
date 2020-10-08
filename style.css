@@ -236,6 +236,7 @@
 #aboutContent{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     min-height: 60vh;
 }
@@ -288,7 +289,7 @@
 }
 
 #mainText {
-    width: 25vw;
+    width: 30em;
     margin-right: 2em;
 }
 
@@ -326,7 +327,6 @@
     width: 100%;
     height: auto;
     min-height: 30vh;
-    margin-bottom: 8em;
 }
 
 #philContainer{
@@ -337,7 +337,6 @@
     width: 100%;
     height: auto;
     min-height: 30vh;
-    margin-bottom: 8em;
 }
 
 #philosophy h1{
@@ -352,6 +351,7 @@
     flex-direction: column;
     height: 55vh;
     position: relative;
+    margin-bottom: 0;
 }
 
 .orbit{
@@ -516,11 +516,16 @@
     background-color: whitesmoke;
 }
 
+/* #projectlines {
+    position: absolute;
+} */
+
 #projectContainer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     background-color: white;
     margin-bottom: 4em;
 }
@@ -535,18 +540,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
 #oneToThree{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
 #fourToSix {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -575,7 +583,7 @@
     font-family: 'Ubuntu', sans-serif;
     opacity: 0;
     transition: opacity .5s ease;
-    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .1));
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .3));
 }
 
 .overlay h1{
@@ -605,8 +613,8 @@
     justify-content: center;
     border: 1px solid rgb(150, 150, 150);
     background-color: rgb(150, 150, 150);
-    height: 12em;
-    width: 12em;
+    min-height: 12em;
+    min-width: 12em;
     border-radius: 15em;
 }
 

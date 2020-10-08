@@ -5,6 +5,7 @@ let logoHolder = document.getElementById('logoHolder');
 let logo = document.createElement('img');
 let headerBase = document.getElementById('headerBase');
 let headerTooth = document.querySelectorAll('.headerTooth');
+let category = document.querySelectorAll('.category')
 let categoryContent = document.querySelectorAll('.categoryContent')
 let orbit = document.querySelectorAll('.orbit');
 let orbitGearContainer = document.querySelectorAll('.orbitGearContainer');
@@ -80,6 +81,7 @@ for (let i = 0; i < orbit.length; i++){
       categoryContent[i].style.display = 'none';
       alreadyRunning[i] = false;
       console.log(alreadyRunning)
+      category[i].style.marginBottom = '0';
     }else if(e){
       orbit[i].style.boxShadow =' 0 0 3em rgba(255, 215, 0, 1)';
       orbitGearContainer[i].style.animationPlayState = 'running';
@@ -88,7 +90,8 @@ for (let i = 0; i < orbit.length; i++){
       alreadyRunning = [false, false, false];
       alreadyRunning[i] = true;
       categoryContent[i].style.display = 'flex';
-      console.log(alreadyRunning);
+      category[i].style.marginBottom = '21em';
+      console.log(category)
     }
   })
 }
