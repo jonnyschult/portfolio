@@ -130,8 +130,11 @@
     justify-content: space-around;
     align-items: center;
     position: relative;
-    top: -62px;
     width: 100%;
+}
+
+#aboutLines{
+    top: -4em;
 }
 
 .leftLine{
@@ -299,19 +302,9 @@
     margin: 0;
 }
 
-.resume{
-    display: flex;
-    flex-direction: column;
-}
-
-.resume h5{
-    color: rgb(150, 150, 150);
-    position: absolute;
-}
-
-.resume img{
-    height: 25em;
-    width: 18em;
+#resume{
+    font-size: 1.1em;
+    line-height: 5em;
 }
 
 #phi {
@@ -323,10 +316,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    height: 54em;
     width: 100%;
-    height: auto;
     min-height: 30vh;
+}
+
+#philosophy h1{
+    justify-self: center;
 }
 
 #philContainer{
@@ -360,7 +357,7 @@
     align-items: center;
     justify-content: center;
     width: 19em;
-    height: 19em;
+    min-height: 19em;
     border-radius: 16em;
     border: 1px solid rgba(255, 215, 0, 1);
     margin: 0 2em 0 2em;
@@ -733,4 +730,171 @@ footer a{
 footer a:hover{
     text-decoration: none;
     color: rgb(255, 217, 0);
+}
+
+/* 5 Turing Machine! */
+
+.turing {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+}
+
+/* head details */
+
+.headT {
+    position: relative;
+    display: flex;
+    width: 19em;
+    height: 19em;
+    border: 2em solid black;
+    background-color: transparent;
+    border-radius: 2em;
+}
+
+.eyeLeft {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    border: 1em solid black;
+    background-color: white;
+    border-radius: 1em;
+    left: 1.5em;
+    top: 2em;
+}
+
+#leftPupil {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: black;
+    top: 10px;
+    left: 10px;
+}
+
+.eyeRight {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    border: 1em solid black;
+    background-color: white;
+    border-radius: 1em;
+    right: 1.5em;
+    top: 2em;
+}
+
+#rightPupil {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: black;
+    top: 10px;
+    left: 10px;
+}
+
+.mouth {
+    position: absolute;
+    width: 8.5em;
+    height: 4.5em;
+    border: 20px solid black;
+    background-color: white;
+    border-radius: 15px;
+    top: 8em;
+    left: 3.1em;
+}
+
+/* CPU */
+
+.cpu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 25em;
+    height: 8em;
+    border: 2em solid black;
+    background-color: transparent;
+    border-radius: 1em;
+    padding: 1em 2em 1em 2em;
+}
+
+.baseT {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 3em;
+    border-radius: 3em;
+    border: .7em solid black;
+}
+
+.toothT {
+    position: absolute;
+    height: 3.7em;
+    width: .5em;
+    border: .1em solid black;
+    background-color: black;
+    z-index: -1;
+}
+
+.holeT{
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background-color: white;
+    border-radius: 2.5em;
+}
+
+.baseTOdd{
+    animation-name: spinOdd;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.baseTEven {
+    transform: rotate(22.5deg);
+    animation-name: spinEven;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.toothT2 {
+    transform: rotate(45deg);
+}
+
+.toothT3 {
+    transform: rotate(90deg);
+}
+
+.toothT4 {
+    transform: rotate(135deg);
+}
+
+.gearT {
+
+}
+
+@keyframes spinOdd {
+    from {
+        transform:rotate(360deg);
+    }
+    to {
+        transform:rotate(0deg);
+    }
+}
+
+@keyframes spinEven {
+    from {
+        transform:rotate(22.5deg);
+    }
+    to {
+        transform:rotate(382.5deg);
+    }
 }
