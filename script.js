@@ -16,12 +16,24 @@ let orbitThree = document.getElementById('orbitThree');
 let spokes = document.querySelectorAll('.spoke');
 let spokes2 = document.querySelectorAll('.spoke2');
 let spokes3 = document.querySelectorAll('.spoke3');
+let baseOdd = document.querySelectorAll('.baseTOdd');
+let baseEven =  document.querySelectorAll('.baseTEven');
 logo.src = './assets/whitesmokeLogo.png';
 logo.setAttribute('id', 'logo');
+
+console.log(baseOdd, baseEven)
 
 window.onscroll = function(){
   gear1.style.transform = `rotate(${window.pageYOffset + 22.5}deg)`;
   gear2.style.transform = `rotate(-${window.pageYOffset}deg)`;
+
+  for(gear of baseEven){
+    gear.style.transform = `rotate(${window.pageYOffset + 22.5}deg)`;
+  }
+  for(gear of baseOdd){
+    gear.style.transform = `rotate(-${window.pageYOffset}deg)`;
+  }
+
 
   if (window.scrollY > 100) {
     header.style.backgroundColor = 'rgba(115, 157, 245, .95)';
@@ -94,50 +106,4 @@ for (let i = 0; i < orbit.length; i++){
       console.log(category)
     }
   })
-}
-
-window.addEventListener("DOMContentLoaded", function() {
-
-  // get the form elements defined in your form HTML above
-  
-  var form = document.getElementById("my-form");
-  var button = document.getElementById("my-form-button");
-  var status = document.getElementById("my-form-status");
-
-  // Success and Error functions for after the form is submitted
-  
-  function success() {
-    form.reset();
-    button.style = "display: none ";
-    status.innerHTML = "Thanks!";
-  }
-
-  function error() {
-    status.innerHTML = "Oops! There was a problem.";
-  }
-
-  // handle the form submission event
-
-  form.addEventListener("submit", function(ev) {
-    ev.preventDefault();
-    var data = new FormData(form);
-    ajax(form.method, form.action, data, success, error);
-  });
-});
-
-// helper function for sending an AJAX request
-
-function ajax(method, url, data, success, error) {
-  var xhr = new XMLHttpRequest();
-  xhr.open(method, url);
-  xhr.setRequestHeader("Accept", "application/json");
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState !== XMLHttpRequest.DONE) return;
-    if (xhr.status === 200) {
-      success(xhr.response, xhr.responseType);
-    } else {
-      error(xhr.status, xhr.response, xhr.responseType);
-    }
-  };
-  xhr.send(data);
 }

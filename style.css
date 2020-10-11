@@ -148,7 +148,7 @@
 .rightLine{
     height: 1px;
     background-color: rgba(255, 215, 0, 1);
-    border: 1px solidrgba(255, 215, 0, 1);
+    border: 1px solid rgba(255, 215, 0, 1);
     width: 35vw;
 }
 
@@ -632,22 +632,53 @@
     font-size: 2em;
 }
 
+#contact{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 #my-form{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    width: 45%;
 }
 
-#senderEmail{
-    margin: 3em 0 3em 0;
-    width: 65%;
+#full-name{
+    margin: 1em 0 1em 0;
+    width: 85%;
     height: 4em;
-    border: 3px solid rgb(150, 150, 150);
-    border-radius: 4px;
-    text-align: center;
+    border: none;
+    border-bottom: 3px solid rgb(150, 150, 150);
+    transition: .2s;
 }
 
-#senderEmail:focus {
+#full-name:hover{
+    border-bottom: 3px solid rgb(255, 217, 0);
+}
+
+#full-name:focus {
+    outline: none;
+    border-color: rgb(115, 157, 245);
+    box-shadow: 0 0 1em rgba(255, 215, 0, 1);
+    color: rgb(41, 43, 44);
+}
+
+#email-address{
+    margin: 1em 0 1em 0;
+    width: 85%;
+    height: 4em;
+    border: none;
+    border-bottom: 3px solid rgb(150, 150, 150);
+    transition: .2s;
+}
+
+#email-address:hover{
+    border-bottom: 3px solid rgb(255, 217, 0);
+}
+
+#email-address:focus {
     outline: none;
     border-color: rgb(115, 157, 245);
     box-shadow: 0 0 1em rgba(255, 215, 0, 1);
@@ -655,12 +686,17 @@
 }
 
 #message {
-    margin: 3em 0 3em 0;
-    width: 65%;
-    height: 15em;
-    border: 3px solid rgb(150, 150, 150);
-    border-radius: 4px;
-    text-align: center;
+    margin: 1em 0 1em 0;
+    width: 85%;
+    /* height: 15em; */
+    border: none;
+    border-bottom: 3px solid rgb(150, 150, 150);
+    transition: .2s;
+
+}
+
+#message:hover{
+    border-bottom: 3px solid rgb(255, 217, 0);
 }
 
 #message:focus {
@@ -670,27 +706,27 @@
     color: rgb(41, 43, 44);
 }
 
-#my-form-button{
+#submit{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 50%;
     height: 3em;
     border-radius: 4px;
     border: rgb(115, 157, 245);
-    background-color: rgb(115, 157, 245);
+    background-color: rgb(41, 43, 44);
     color: whitesmoke;
 }
 
-#my-form-button:hover {
-    box-shadow: 0 0 .5em rgba(255, 215, 0, 1);
+#submit:hover {
+    box-shadow: 0 0 1em rgba(255, 215, 0, 1);
 }
 
-#my-form-button:focus{
+#submit:focus{
     outline: none;
 }
 
-#my-form-button:active{
+#submit:active{
     outline: none;
     box-shadow: 0 0 0 rgba(255, 215, 0, 1);
 }
@@ -700,44 +736,14 @@
     justify-content: space-around;
 }
 
-#farewell{
-    display: flex;
-    justify-content: center;
-}
+/* !5 Turing Machine! */
 
-#farewell img{
-    height: 24em;
-    width: 24em;
-}
-
-footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid rgb(41, 43, 44);
-    background-color: rgb(100, 137, 216);
-    height: 4em;
-    width: 100%;
-    color: whitesmoke;
-}
-
-footer a{
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-footer a:hover{
-    text-decoration: none;
-    color: rgb(255, 217, 0);
-}
-
-/* 5 Turing Machine! */
-
-.turing {
+#turingBot {
     display: flex;
     flex-direction: column;
     height: auto;
     align-items: center;
+    margin-bottom: 2em;
 }
 
 /* head details */
@@ -747,7 +753,7 @@ footer a:hover{
     display: flex;
     width: 19em;
     height: 19em;
-    border: 2em solid black;
+    border: 2em solid rgb(41, 43, 44);
     background-color: transparent;
     border-radius: 2em;
 }
@@ -756,7 +762,7 @@ footer a:hover{
     position: absolute;
     width: 5em;
     height: 5em;
-    border: 1em solid black;
+    border: 1em solid rgb(41, 43, 44);
     background-color: white;
     border-radius: 1em;
     left: 1.5em;
@@ -767,8 +773,8 @@ footer a:hover{
     position: relative;
     width: 30px;
     height: 30px;
-    border: 1px solid black;
-    background-color: black;
+    border: 1px solid rgb(41, 43, 44);
+    background-color: rgb(41, 43, 44);
     top: 10px;
     left: 10px;
 }
@@ -777,8 +783,8 @@ footer a:hover{
     position: absolute;
     width: 5em;
     height: 5em;
-    border: 1em solid black;
-    background-color: white;
+    border: 1em solid rgb(41, 43, 44);
+    background-color: transparent;
     border-radius: 1em;
     right: 1.5em;
     top: 2em;
@@ -788,8 +794,8 @@ footer a:hover{
     position: relative;
     width: 30px;
     height: 30px;
-    border: 1px solid black;
-    background-color: black;
+    border: 1px solid rgb(41, 43, 44);
+    background-color: rgb(41, 43, 44);
     top: 10px;
     left: 10px;
 }
@@ -798,8 +804,8 @@ footer a:hover{
     position: absolute;
     width: 8.5em;
     height: 4.5em;
-    border: 20px solid black;
-    background-color: white;
+    border: 20px solid rgb(41, 43, 44);
+    background-color: transparent;
     border-radius: 15px;
     top: 8em;
     left: 3.1em;
@@ -815,7 +821,7 @@ footer a:hover{
     position: relative;
     width: 25em;
     height: 8em;
-    border: 2em solid black;
+    border: 2em solid rgb(41, 43, 44);
     background-color: transparent;
     border-radius: 1em;
     padding: 1em 2em 1em 2em;
@@ -829,15 +835,15 @@ footer a:hover{
     height: 3em;
     width: 3em;
     border-radius: 3em;
-    border: .7em solid black;
+    border: .7em solid rgb(41, 43, 44);
 }
 
 .toothT {
     position: absolute;
     height: 3.7em;
     width: .5em;
-    border: .1em solid black;
-    background-color: black;
+    border: .1em solid rgb(41, 43, 44);
+    background-color: rgb(41, 43, 44);
     z-index: -1;
 }
 
@@ -845,7 +851,7 @@ footer a:hover{
     position: absolute;
     width: 2em;
     height: 2em;
-    background-color: white;
+    background-color: rgb(255, 217, 0);
     border-radius: 2.5em;
 }
 
@@ -880,7 +886,7 @@ footer a:hover{
 
 }
 
-@keyframes spinOdd {
+/* @keyframes spinOdd {
     from {
         transform:rotate(360deg);
     }
@@ -896,4 +902,25 @@ footer a:hover{
     to {
         transform:rotate(382.5deg);
     }
+} */
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgb(41, 43, 44);
+    background-color: rgb(100, 137, 216);
+    height: 4em;
+    width: 100%;
+    color: whitesmoke;
+}
+
+footer a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: rgb(255, 217, 0);
 }
