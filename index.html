@@ -6,6 +6,9 @@
     <title>Jonny Schult</title>
     <link rel="shortcut icon" href="assets/output-onlinepngtools.png" type="image/x-icon">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./style.css">
@@ -300,7 +303,7 @@
       
       <div id="projectContainer">
 
-        <h1 id="portfolio">Portfolio</h1>
+        <h1 id="portfolio">Projects</h1>
         <div id="projectItems">
           <div id="oneToThree">
             <a class="projectLink" href="https://jnbs-strava-runner-sheets.web.app/" target="blank">
@@ -343,21 +346,21 @@
       </div>
 
       <div id="contact">
+        <div id="formAndBotRow">
+          <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mdopawwv" method="post">
+            <fieldset id="fs-frm-inputs">
+              <!-- <label for="full-name">Full Name</label> -->
+              <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+              <!-- <label for="email-address">Email Address</label> -->
+              <input type="email" name="_replyto" id="email-address" placeholder="your-email@here.com" required="">
+              <!-- <label for="message">Message</label> -->
+              <textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
+              <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+            </fieldset>
+            <input id="submit" type="submit" value="Submit">
+          </form>
 
-        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mdopawwv" method="post">
-          <fieldset id="fs-frm-inputs">
-            <!-- <label for="full-name">Full Name</label> -->
-            <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
-            <!-- <label for="email-address">Email Address</label> -->
-            <input type="email" name="_replyto" id="email-address" placeholder="your-email@here.com" required="">
-            <!-- <label for="message">Message</label> -->
-            <textarea rows="5" name="message" id="message" placeholder="Message" required=""></textarea>
-            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
-          </fieldset>
-          <input id="submit" type="submit" value="Submit">
-        </form>
-
-        <div id="turingBot">
+          <div id="turingBot">
         <div class="headT">
         <div class="eyeLeft">
         <div id="leftPupil"></div>
@@ -414,15 +417,17 @@
           </div>
         </div>
         </div>
+          </div>
         </div>
-
         <div id="links">
-
+          <a href="https://github.com/jonnyschult" target="blank"><i class="fa fa-github fa-fw"></i></a>
+          <a href="https://www.linkedin.com/in/jonny-schult" target="blank"><i class="fa fa-linkedin fa-fw"></i></a> 
+          <a href="https://codepen.io/jonny-n-b-schult/" target="blank"><i class="fa fa-codepen fa-fw"></i></a> 
         </div>
 
       </div>
     </main>
-    <footer> <a href="https://github.com/jonnyschult"><i class="fa fa-github fa-fw"></i></a><a href="https://www.linkedin.com/in/jonathan-schult-827156195/">LinkedIn</a> <span> © 2020 Copyright: Jonny Schult</span></footer>
+    <footer><span> © 2020 Copyright: Jonny Schult</span></footer>
   </div>
 
     <script src="./script.js"></script>

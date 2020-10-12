@@ -250,21 +250,24 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 24em;
-    width: 24em;
+    min-height: 23em;
+    max-height: 24em;
+    min-width: 23em;
+    max-width: 24em;
+    margin-bottom: 1em;
 }
 
 .picHolder{
     position: relative;
-    width: 8em;
+    width: 33%;
     height: 8em;
     display: flex;
     flex-wrap: wrap;
 }
 
 .aboutPics{
-    height: 8em;
-    width: 8em;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -634,15 +637,25 @@
 
 #contact{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-#my-form{
+#formAndBotRow{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 100vw;
+}
+
+#fs-frm{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 45%;
+    min-width: 45%;
+    margin-bottom: 2em;
 }
 
 #full-name{
@@ -744,6 +757,7 @@
     height: auto;
     align-items: center;
     margin-bottom: 2em;
+    max-width: 50%;
 }
 
 /* head details */
@@ -816,15 +830,15 @@
 .cpu {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: relative;
-    width: 25em;
+    max-width: 23em;
     height: 8em;
     border: 2em solid rgb(41, 43, 44);
     background-color: transparent;
     border-radius: 1em;
-    padding: 1em 2em 1em 2em;
+    padding: 1em 1em 1em 1em;
 }
 
 .baseT {
@@ -836,6 +850,7 @@
     width: 3em;
     border-radius: 3em;
     border: .7em solid rgb(41, 43, 44);
+    margin: 0 .25em 0 .25em;
 }
 
 .toothT {
@@ -856,18 +871,18 @@
 }
 
 .baseTOdd{
-    animation-name: spinOdd;
+    /* animation-name: spinOdd;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
 }
 
 .baseTEven {
     transform: rotate(22.5deg);
-    animation-name: spinEven;
+    /* animation-name: spinEven;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear; */
 }
 
 .toothT2 {
@@ -899,6 +914,31 @@
         transform:rotate(382.5deg);
     }
 } */
+
+#links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 100vw;
+    margin-bottom: 1em;
+}
+
+#links a i{
+    background-color: white;
+    color: rgb(41, 43, 44);
+    font-size: 12em;
+    border-radius: .1em;
+    transition: .2s;
+}
+
+#links a i:hover{
+    background-color: rgb(255, 217, 0);
+    color: white;
+    font-size: 12em;
+    border-radius: .1em;
+}
 
 footer{
     display: flex;
