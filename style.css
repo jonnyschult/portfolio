@@ -113,16 +113,19 @@
 
 .display-4 {
   width: 100%;
-  font-size: 24vw;
+  font-size: 15vw;
   color: rgba(245, 245, 245, 0.9);
   text-shadow: 0.5em 0.5em rgba(255, 215, 0, 0.3);
   text-align: center;
 }
 
 .lead {
+  position: relative;
   color: rgba(245, 245, 245, 0.8);
-  font-size: small;
+  font-size: 5vh;
   margin-right: 10px;
+  top: 50vh;
+  right: 15vw;
 }
 
 .lineContainer {
@@ -248,7 +251,7 @@
 #about h1 {
   position: relative;
   color: rgb(130, 130, 130);
-  font-size: 5em;
+  font-size: 4em;
   margin-bottom: 1em;
 }
 
@@ -555,6 +558,22 @@
   width: 100%;
 }
 
+@media only screen and (max-width: 1070px) {
+  .mainProjectLink img {
+    position: relative;
+    max-width: 33em !important;
+    height: 25em !important;
+    width: 100vw !important;
+  }
+
+  .projectLink img {
+    max-width: 33em !important;
+    width: 100vw !important;
+    height: 25em;
+    object-fit: cover;
+  }
+}
+
 .mainProject {
   width: 70em;
   height: 30em;
@@ -600,11 +619,14 @@
 
 .projectLink {
   position: relative;
-  width: 33em;
-  height: 25em;
+  max-width: 33em;
+  max-height: 25em;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
 }
+
 .projectLink img {
   width: 33em;
   height: 25em;
