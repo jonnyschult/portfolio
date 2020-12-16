@@ -249,7 +249,6 @@
 }
 
 #about h1 {
-  position: relative;
   color: rgb(130, 130, 130);
   font-size: 4em;
   margin-bottom: 1em;
@@ -260,7 +259,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  min-height: 60vh;
+  min-height: auto;
 }
 
 #picsContainer {
@@ -327,6 +326,56 @@
 #resume {
   font-size: 1.1em;
   line-height: 5em;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.skills h2 {
+  margin: 1em;
+}
+
+.badgeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  justify-content: space-evenly;
+}
+
+.skillBadge {
+  margin: 0.5em;
+  width: 6em;
+  height: 6em;
+  -webkit-filter: grayscale(1);
+  transition: 0.5s;
+}
+
+.skillBadge:hover {
+  -webkit-filter: grayscale(0);
+}
+
+.badgeDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badgeTitle {
+  position: absolute;
+  bottom: -35px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.skillBadge:hover + .badgeTitle {
+  opacity: 1;
 }
 
 #phi {
