@@ -608,7 +608,7 @@
 }
 
 @media only screen and (max-width: 1070px) {
-  .mainProjectLink img {
+  .mainProject img {
     position: relative;
     max-width: 33em !important;
     height: 25em !important;
@@ -624,28 +624,31 @@
 }
 
 .mainProject {
-  width: 70em;
-  height: 30em;
-  object-fit: cover;
-  background-color: green;
-}
-
-.mainProjectLink {
   position: relative;
   width: 100%;
   height: 100%;
   display: flex;
 }
 
-.mainProjectLink img {
+.mainProject img {
   position: relative;
   width: 66em;
   height: 30em;
   object-fit: cover;
 }
-.mainOverlay {
-  color: rgb(70, 96, 151);
 
+.mainProjectLinks,
+.mainProjectLinks:hover {
+  text-decoration: none;
+  color: rgb(70, 96, 151);
+}
+
+.demoLink {
+  font-size: 2.5em;
+  margin: 1.5em;
+}
+
+.mainOverlay {
   background-image: linear-gradient(
     rgba(255, 255, 255, 1),
     rgba(255, 255, 255, 0.3)
@@ -710,7 +713,7 @@
 }
 
 .projectLink:hover .overlay,
-.mainProjectLink:hover .overlay {
+.mainProject:hover .overlay {
   opacity: 1;
 }
 
