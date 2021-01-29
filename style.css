@@ -637,15 +637,46 @@
   object-fit: cover;
 }
 
-.mainProjectLinks,
-.mainProjectLinks:hover {
+.mainProjectLinks {
   text-decoration: none;
   color: rgb(70, 96, 151);
+  transition: 0.4s ease;
 }
 
-.demoLink {
-  font-size: 2.5em;
-  margin: 1.5em;
+.mainProjectLinks:hover {
+  text-decoration: none;
+  color: rgb(37, 64, 122);
+  font-weight: bolder;
+}
+
+.videoDemoContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.documentationLinks {
+  text-decoration: none;
+  color: rgb(70, 96, 151);
+  padding: 1em;
+  transition: 0.4s ease;
+}
+
+.documentationLinks:hover {
+  text-decoration: none;
+  color: rgb(37, 64, 122);
+}
+
+.videoDemo {
+  position: relative;
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
+}
+
+.videoDemo:hover {
+  opacity: 1;
 }
 
 .mainOverlay {
